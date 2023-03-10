@@ -1,0 +1,9 @@
+sudo apt-get update
+sudo apt-get install python3-pip
+pip3 install pandas
+pip3 install nltk
+pip3 install streamlit
+pip3 install emoji
+pip install protobuf==3.20.*
+export PATH=~/.local/bin/:$PATH
+pip install scikit-learn
