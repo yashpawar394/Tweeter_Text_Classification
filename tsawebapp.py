@@ -24,11 +24,11 @@ conn = sqlite3.connect('data.db')
 c = conn.cursor()
 
 def create_table():
-	c.execute('CREATE TABLE IF NOT EXISTS tweetTable(username TEXT,password TEXT)')
+	c.execute('CREATE TABLE IF NOT EXISTS tweetTable(tweet TEXT,sentiment TEXT)')
 
 
 def add_data(tweet,sentiment):
-	c.execute('INSERT INTO tweetTable(username,password) VALUES (?,?)',(tweet,sentiment))
+	c.execute('INSERT INTO tweetTable(tweet,sentiment) VALUES (?,?)',(tweet,sentiment))
 	conn.commit()
     
 def view_all_tweets():
